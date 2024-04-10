@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
+
 import pickle  # Used for loading the pre-trained model
 
 
@@ -17,7 +17,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
+# Load the Pre-Trained Model (replace with your file path)
 file_open =open('Ranfor_model.pkl', 'rb')
 pipe = pickle.load(file_open) #file loading pipe is just a variable name
 
@@ -25,7 +25,7 @@ pipe = pickle.load(file_open) #file loading pipe is just a variable name
 
 result=0
 st.title("Heart Disease Predictor")
-st.markdown("**This app predicts the likelihood of heart disease based on user input.**")
+st.markdown("This app predicts the likelihood of heart disease based on user input.")
 
 age=st.number_input("Enter Your Age: ")
 gender=st.selectbox("Gender:",['F', 'M'])
