@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-import pickle  # For loading the pre-trained model
+import pickle  # Used for loading the pre-trained model
 
 
 st.markdown(
@@ -17,7 +17,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Load the Pre-Trained Model (replace with your file path)
+
 file_open =open('Ranfor_model.pkl', 'rb')
 pipe = pickle.load(file_open) #file loading pipe is just a variable name
 
